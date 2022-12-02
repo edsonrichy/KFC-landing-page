@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: 'poppins',sans-serif;
+}
+
+body{
+    background-color: #a3080c;
+    max-height: 100vh;
+    
+}
+
+header{
+    display: flex;
+    height: 100px;
+    align-items: center;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    color: white;
+    padding: 20px;
+    position: relative;
+}
+ul {
+    display: flex;
+    width: 500px;
+    justify-content: space-around;
+    list-style: none;
+}
+ul li {
+ cursor: pointer;
+}
+.hamburger{
+    display: none;
+    
+}
+.bar{
+    transition: 0.5s;
+}
+.logo{
+    height: 70px;
+    width: auto;
+}
+
+@media(max-width:768px){
+   ul{
+    display: block;
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    color: #a3080c;
+    text-align: center;
+    top: 0;
+    left: 0;
+    transition: 0.5s ;
+    transform: translateY(-1000px);
+    
+   } 
+    ul.active {
+        transform: translateY(0px);
+    }
+    ul.active li{
+       margin: 80px;
+    }
+    .hamburger{
+        display: block;
+        cursor: pointer;
+        height: auto;
+        position: absolute;
+        right: 0;
+        z-index: 0;
+
+    }
+    .bar{
+        display: block;
+        border-radius: 10px;
+        height: 5px;
+        width: 50px;
+        background-color: rgb(255, 255, 255);
+        margin: 8px;
+
+
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform:  rotate(45deg) translateY(18px );
+        background-color: #a3080c;
+        
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform:  rotate(-45deg) translateY(-18px );
+        background-color: #a3080c;
+       
+    }
+    .hamburger.active .bar:nth-child(2){
+    opacity: 0;
+    }
+    
+}
+
+main{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+.main-img{
+    height: 500px;
+    width: auto;
+
+}
+.btn{
+    font-weight: bold;
+    background-color: white;
+    color: #a3080c;
+    position: absolute;
+    bottom: 0;
+    right: 80px;
+    margin-bottom: 80px;
+    cursor: pointer;
+    height: 40px;
+    width: 100px;
+    border-radius: 20px;
+    border: none;
+}
+main h1{
+    font-size: 50px;
+  
+}
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+   width: 40px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 20px;
+}
+.icon a img {
+    height: 30px;
+    width: auto;
+}
